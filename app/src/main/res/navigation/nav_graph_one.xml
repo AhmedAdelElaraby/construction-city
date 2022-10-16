@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_one"
+    app:startDestination="@id/splash_One">
+
+    <fragment
+        android:id="@+id/splash_One"
+        android:name="com.teraninja.constructioncity.Splash_One"
+        android:label="fragment_splash__one"
+        tools:layout="@layout/fragment_splash__one" >
+        <action
+            android:id="@+id/action_splash_One_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_splash_One_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.teraninja.constructioncity.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_confirm_Phone"
+            app:destination="@id/confirm_Phone" />
+        <action
+            android:id="@+id/action_login_to_password2"
+            app:destination="@id/password2" />
+        <action
+            android:id="@+id/action_login_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirm_Phone"
+        android:name="com.teraninja.constructioncity.Confirm_Phone"
+        android:label="fragment_confirm__phone"
+        tools:layout="@layout/fragment_confirm__phone" >
+        <action
+            android:id="@+id/action_confirm_Phone_to_signUp"
+            app:destination="@id/signUp" />
+        <argument
+            android:name="number"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.teraninja.constructioncity.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_home2"
+            app:destination="@id/home2" />
+        <argument
+            android:name="number"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_signUp_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.teraninja.constructioncity.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_insideCountry"
+            app:destination="@id/insideCountry" />
+        <action
+            android:id="@+id/action_home2_to_searchWithProdacted"
+            app:destination="@id/searchWithProdacted" />
+        <action
+            android:id="@+id/action_home2_to_seting"
+            app:destination="@id/seting" />
+        <action
+            android:id="@+id/action_home2_to_allCard"
+            app:destination="@id/allCard" />
+        <action
+            android:id="@+id/action_home2_to_allPremoCode"
+            app:destination="@id/allPremoCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/insideCountry"
+        android:name="com.teraninja.constructioncity.InsideCountry"
+        android:label="fragment_inside_country"
+        tools:layout="@layout/fragment_inside_country" >
+        <action
+            android:id="@+id/action_insideCountry_to_byCompany"
+            app:destination="@id/byCompany" />
+        <action
+            android:id="@+id/action_insideCountry_to_seting"
+            app:destination="@id/seting" />
+    </fragment>
+    <fragment
+        android:id="@+id/byCompany"
+        android:name="com.teraninja.constructioncity.ByCompany"
+        android:label="fragment_by_company"
+        tools:layout="@layout/fragment_by_company" >
+        <action
+            android:id="@+id/action_byCompany_to_byCategory"
+            app:destination="@id/byCategory" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_byCompany_to_seting"
+            app:destination="@id/seting" />
+    </fragment>
+    <fragment
+        android:id="@+id/byCategory"
+        android:name="com.teraninja.constructioncity.ByCategory"
+        android:label="fragment_by_category"
+        tools:layout="@layout/fragment_by_category" >
+        <action
+            android:id="@+id/action_byCategory_to_byCategory_one"
+            app:destination="@id/byCategory_one"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_byCategory_to_seting"
+            app:destination="@id/seting" />
+    </fragment>
+    <fragment
+        android:id="@+id/byCategory_one"
+        android:name="com.teraninja.constructioncity.ByCategory_one"
+        android:label="fragment_by_category_one"
+        tools:layout="@layout/fragment_by_category_one" >
+        <action
+            android:id="@+id/action_byCategory_one_to_byCategory_two"
+            app:destination="@id/byCategory_two" />
+        <argument
+            android:name="company_id"
+            app:argType="string"
+            android:defaultValue="d" />
+        <argument
+            android:name="servise_id"
+            app:argType="string"
+            android:defaultValue="d" />
+        <action
+            android:id="@+id/action_byCategory_one_to_seting"
+            app:destination="@id/seting" />
+    </fragment>
+    <fragment
+        android:id="@+id/byCategory_two"
+        android:name="com.teraninja.constructioncity.ByCategory_two"
+        android:label="fragment_by_category_two"
+        tools:layout="@layout/fragment_by_category_two" >
+        <action
+            android:id="@+id/action_byCategory_two_to_showDetilseCategory"
+            app:destination="@id/showDetilseCategory" />
+        <argument
+            android:name="companyId"
+            app:argType="string"
+            android:defaultValue="d" />
+        <argument
+            android:name="brandsid"
+            app:argType="string"
+            android:defaultValue="d" />
+        <action
+            android:id="@+id/action_byCategory_two_to_seting"
+            app:destination="@id/seting" />
+    </fragment>
+    <fragment
+        android:id="@+id/showDetilseCategory"
+        android:name="com.teraninja.constructioncity.ShowDetilseCategory"
+        android:label="fragment_show_detilse_category"
+        tools:layout="@layout/fragment_show_detilse_category" >
+        <action
+            android:id="@+id/action_showDetilseCategory_to_cart"
+            app:destination="@id/cart" />
+        <argument
+            android:name="IdProdacted"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_showDetilseCategory_to_seting"
+            app:destination="@id/seting" />
+        <argument
+            android:name="CompanyId"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.teraninja.constructioncity.Cart"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cart_to_location"
+            app:destination="@id/location" />
+        <action
+            android:id="@+id/action_cart_to_seting"
+            app:destination="@id/seting" />
+        <argument
+            android:name="CompanyId"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="idProdected"
+            app:argType="string"
+            android:defaultValue="d" />
+    </fragment>
+    <fragment
+        android:id="@+id/location"
+        android:name="com.teraninja.constructioncity.Location"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_location_to_orders"
+            app:destination="@id/orders" />
+    </fragment>
+    <fragment
+        android:id="@+id/orders"
+        android:name="com.teraninja.constructioncity.Orders"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_orders_to_lastDetildeOrder"
+            app:destination="@id/lastDetildeOrder" />
+    </fragment>
+    <fragment
+        android:id="@+id/password2"
+        android:name="com.teraninja.constructioncity.Password"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/action_password2_to_home2"
+            app:destination="@id/home2" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchWithProdacted"
+        android:name="com.teraninja.constructioncity.SearchWithProdacted"
+        android:label="fragment_search_with_prodacted"
+        tools:layout="@layout/fragment_search_with_prodacted" >
+        <action
+            android:id="@+id/action_searchWithProdacted_to_seting"
+            app:destination="@id/seting" />
+    </fragment>
+    <fragment
+        android:id="@+id/seting"
+        android:name="com.teraninja.constructioncity.Seting"
+        android:label="fragment_seting"
+        tools:layout="@layout/fragment_seting" >
+        <action
+            android:id="@+id/action_seting_to_chengeProfile"
+            app:destination="@id/chengeProfile" />
+        <action
+            android:id="@+id/action_seting_to_splash_One"
+            app:destination="@id/splash_One" />
+        <action
+            android:id="@+id/action_seting_to_orders"
+            app:destination="@id/orders" />
+        <action
+            android:id="@+id/action_seting_to_allLocation"
+            app:destination="@id/allLocation" />
+    </fragment>
+    <fragment
+        android:id="@+id/chengeProfile"
+        android:name="com.teraninja.constructioncity.ChengeProfile"
+        android:label="fragment_chenge_profile"
+        tools:layout="@layout/fragment_chenge_profile" />
+    <fragment
+        android:id="@+id/allLocation"
+        android:name="com.teraninja.constructioncity.AllLocation"
+        android:label="fragment_all_location"
+        tools:layout="@layout/fragment_all_location" />
+    <fragment
+        android:id="@+id/allCard"
+        android:name="com.teraninja.constructioncity.AllCard"
+        android:label="fragment_all_card"
+        tools:layout="@layout/fragment_all_card" >
+        <action
+            android:id="@+id/action_allCard_to_cart"
+            app:destination="@id/cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastDetildeOrder"
+        android:name="com.teraninja.constructioncity.lastDetildeOrder"
+        android:label="fragment_last_detilde_order"
+        tools:layout="@layout/fragment_last_detilde_order" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="d" />
+    </fragment>
+    <fragment
+        android:id="@+id/allPremoCode"
+        android:name="com.teraninja.constructioncity.AllPremoCode"
+        android:label="fragment_all_premo_code"
+        tools:layout="@layout/fragment_all_premo_code" />
+</navigation>

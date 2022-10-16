@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="@dimen/_5sdp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:shadowColor="#27A4DA"
+        android:layout_margin="@dimen/_5sdp"
+        android:outlineSpotShadowColor="#3BBBE2"
+        android:id="@+id/c1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_70sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/backgrund_spinner_login"
+                android:id="@+id/image"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/image"
+                android:text=""
+                style="@style/text"
+                android:fontFamily="@font/alfont_com_sfproar_semibold"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="@id/image"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/name" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/alfont_com_sfproar_semibold"
+                android:text=""
+                android:textColor="#27A4DA"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:src="@drawable/delete"
+                android:id="@+id/delete" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@id/delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/l2">
+
+                <ImageView
+                    android:id="@+id/plase"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/plase"
+                    android:padding="@dimen/_7sdp"
+                    android:background="@drawable/style_buttonsignup"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:id="@+id/cuont"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/alfont_com_sfproar_semibold"
+                    style="@style/text" />
+
+                <ImageView
+                    android:id="@+id/mines"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/minse"
+                    android:padding="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:background="@drawable/style_buttonsignup"
+                    android:layout_marginStart="@dimen/_10sdp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

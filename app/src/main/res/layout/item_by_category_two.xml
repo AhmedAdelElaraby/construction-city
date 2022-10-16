@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="@dimen/_140sdp"
+        app:cardElevation="@dimen/_5sdp"
+        android:shadowColor="#3BBBE2"
+        android:outlineSpotShadowColor="#3BBBE2"
+
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_height="180dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:src="@drawable/backgrund_spinner_login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/image"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ahmed"
+                android:fontFamily="@font/alfont_com_sfproar_semibold"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/nameProdected"
+                style="@style/text"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nameProdected"
+                android:text="pric"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/alfont_com_sfproar_semibold"
+                android:textColor="#27A4DA"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:id="@+id/pric"/>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

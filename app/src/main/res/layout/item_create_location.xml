@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_confirmation"
+            android:fontFamily="@font/alfont_com_sfproar_semibold"
+            android:textColor="#27A4DA"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_5sdp" />
+<Spinner
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_height="@dimen/_40sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text"
+    android:id="@+id/spinner"
+    />
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            android:padding="@dimen/_5sdp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:checked="false"
+                android:text="@string/work_site"
+                android:textColor="#13718D"
+                android:textSize="@dimen/_13sdp"
+
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:checked="false"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/homes"
+                android:textColor="#13718D"
+
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+
+                />
+
+            <RadioButton
+
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_40sdp"
+
+                android:checked="false"
+                android:text="@string/other"
+                android:textColor="#13718D"
+
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+
+                />
+        </RadioGroup>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup1"
+            android:hint="@string/street_area_name"
+            android:backgroundTint="#27A4DA"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textColorHint="#27A4DA"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:id="@+id/namestreem" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:padding="@dimen/_5sdp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/namestreem">
+
+            <RadioButton
+                android:id="@+id/vela"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:checked="false"
+                android:text="@string/villa"
+                android:textColor="#13718D"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/omara"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_140sdp"
+                android:checked="false"
+                android:text="@string/building"
+                android:textColor="#13718D"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+
+                />
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup2"
+            android:hint="@string/building_number_name"
+            android:backgroundTint="#27A4DA"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textColorHint="#27A4DA"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:id="@+id/addrass" />
+
+        <EditText
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/addrass"
+            android:hint="@string/turn_number"
+            android:backgroundTint="#27A4DA"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textColorHint="#27A4DA"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:id="@+id/turn_number" />
+
+        <EditText
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addrass"
+            android:hint="@string/slit_number"
+            android:backgroundTint="#27A4DA"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textColorHint="#27A4DA"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:id="@+id/slit_number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slit_number"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:hint="@string/add_information"
+            android:gravity="start|top"
+            android:backgroundTint="#27A4DA"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textColorHint="#27A4DA"
+            android:id="@+id/Add_information" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/savelocation"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/style_buttonsignup"
+        android:fontFamily="@font/alfont_com_sfproar_semibold"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:backgroundTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Add_information" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

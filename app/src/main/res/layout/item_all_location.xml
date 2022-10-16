@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:id="@+id/caseorders"
+        android:text="case"
+        android:background="@drawable/itemnamelocation"
+        android:padding="@dimen/_5sdp"
+        android:fontFamily="@font/alfont_com_sfproar_semibold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:textColor="#125515"
+        android:textSize="@dimen/_15sdp"
+        android:id="@+id/chenge"
+        android:text="@string/change"
+
+        android:padding="@dimen/_5sdp"
+        android:fontFamily="@font/alfont_com_sfproar_semibold" />
+
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/alfont_com_sfproar_semibold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/chenge"
+    android:layout_marginTop="@dimen/_10sdp"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:padding="@dimen/_5sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:id="@+id/addrass"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
